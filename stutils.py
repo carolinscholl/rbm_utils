@@ -2,7 +2,7 @@ import numpy as np
 from numpy import unique
 from matplotlib import pyplot as plt
 from scipy.stats import entropy
-from scipy.misc import logsumexp
+from scipy.special import logsumexp
 from itertools import product
 
 
