@@ -1,11 +1,9 @@
 import numpy as np
-from scipy.sparse import csc_matrix, hstack
-import tensorflow as tf
 
 # Functions to compute FIM diagonal based on samples from RBMs
 
 def rbm_fim_diag(sample, nvis):
-# only works for small models and/or few samples
+    # only works for small models and/or few samples
     sample = np.asarray(sample).astype(bool)
     nsamples = sample.shape[0]
     vis = sample[:, :nvis]
@@ -45,7 +43,7 @@ def rbm_fi_biases(sample, nvis):
     return res
 
 def FI_weights_var_heur_estimates(samples, nv, nh, weights, mask=None):
-# function returns variance and heuristic estimates of FI for the weights, not visible and hidden biases
+    # compute variance and heuristic estimates of FI for the weights, not biases
     def f(x):
         return 1/(1+np.exp(-x))
 
