@@ -92,4 +92,3 @@ def FI_weights_var_heur_estimates(samples, nv, nh, weights, mask=None):
     allf2 = allv2*(1-allv2)
     
     return allf1, allf2 # allf1 = variance estimate, allf2 = heuristic estimate
-
